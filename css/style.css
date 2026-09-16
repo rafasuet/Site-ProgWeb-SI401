@@ -1,0 +1,137 @@
+/* ===== Variáveis de cor (paleta inspirada na FT/Unicamp) ===== */
+:root {
+  --azul-escuro: #12395C;
+  --verde-agua: #1FA6A0;
+  --fundo-claro: #FAFAFA;
+  --texto-escuro: #222222;
+  --branco: #FFFFFF;
+}
+
+/* ===== Reset básico ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--texto-escuro);
+  background-color: var(--fundo-claro);
+  line-height: 1.6;
+  padding-top: 90px; /* espaço reservado para o header fixo */
+}
+
+/* ===== Header e navegação (fixos no topo) ===== */
+header {
+  background-color: var(--azul-escuro);
+  color: var(--branco);
+  padding: 15px 30px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+}
+
+header h1 {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+nav a {
+  color: var(--branco);
+  text-decoration: none;
+  font-weight: bold;
+  padding-bottom: 3px;
+  border-bottom: 2px solid transparent;
+  transition: border-color 0.2s ease;
+}
+
+nav a:hover {
+  border-bottom: 2px solid var(--verde-agua);
+}
+
+/* ===== Conteúdo principal ===== */
+main {
+  flex: 1;
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 30px 20px;
+}
+
+section,
+article {
+  background-color: var(--branco);
+  border-radius: 6px;
+  padding: 20px 25px;
+  margin-bottom: 25px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  color: var(--azul-escuro);
+  border-bottom: 3px solid var(--verde-agua);
+  padding-bottom: 6px;
+  margin-bottom: 15px;
+}
+
+a {
+  color: var(--verde-agua);
+}
+
+/* ===== Tabela do cronograma ===== */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+caption {
+  text-align: left;
+  font-style: italic;
+  margin-bottom: 10px;
+  color: var(--texto-escuro);
+}
+
+th,
+td {
+  text-align: left;
+  padding: 10px;
+  border-bottom: 1px solid #DDDDDD;
+}
+
+thead th {
+  background-color: var(--azul-escuro);
+  color: var(--branco);
+}
+
+/* ===== Cards do professor/PED ===== */
+article img {
+  max-width: 180px;
+  border-radius: 50%;
+  display: block;
+  margin: 10px 0 15px 0;
+}
+
+/* ===== Footer ===== */
+footer {
+  background-color: var(--azul-escuro);
+  color: var(--branco);
+  text-align: center;
+  padding: 15px;
+}
